@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastNEL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            background: #050712;
+            overflow: hidden;
+            font-family: "SimSun", 宋体, serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .star-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .star {
+            position: absolute;
+            background: #ffffff;
+            border-radius: 50%;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        h1 {
+            font-size: 72px;
+            font-family: "SimSun", 宋体;
+            letter-spacing: 8px;
+            margin-bottom: 16px;
+        }
+        .desc {
+            font-size: 20px;
+            color: #c2d4ff;
+            margin-bottom: 40px;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 14px 48px;
+            border: 2px solid #78aaff;
+            border-radius: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 22px;
+            transition: 0.2s;
+        }
+        .download-btn:hover {
+            background-color: #2b5299;
+        }
+        .pwd-text {
+            margin-top: 24px;
+            font-size: 18px;
+            color: #a0b8e8;
+        }
+    </style>
+</head>
+<body>
+    <div class="star-bg" id="starBox"></div>
+    <div class="content">
+        <h1>FastNEL</h1>
+        <div class="desc">一个好用免费的NEL</div>
+        <a class="download-btn" href="https://wwbko.lanzouq.com/iMx3T4e8sm4b" target="_blank">下载</a>
+        <div class="pwd-text">密码1145</div>
+    </div>
+
+    <script>
+        const starBox = document.getElementById('starBox');
+        for(let i = 0; i < 180; i++){
+            const star = document.createElement('div');
+            star.className = 'star';
+            const size = Math.random() * 2 + 0.2;
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.opacity = Math.random()*0.5+0.2;
+            starBox.appendChild(star);
+        }
+    </script>
+</body>
+</html>
